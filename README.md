@@ -1,1 +1,1 @@
-# tp-1-y-2-ejercicios
+# ejercicios de programacion y trabajos practicos
