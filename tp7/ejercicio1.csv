@@ -1,0 +1,36 @@
+Ejercicio 1 - Algunas preguntas
+
+1- ¿Porque es importante validar los datos que ingresa un usuario?
+2- ¿Que hace strip y en que se diferencia de split?
+3- ¿Para que puede servir count cuando una linea tiene datos separados por comas o por punto y coma?
+4- ¿Que problema pueden traer los espacios de mas al principio o al final de un dato?
+
+1- La importancia de la validación es para no generar incongruencias en el código del programa, nos ayuda a saber si el 
+usuario ingresa datos correctos, o los esperados. Si al usuario se le solicitara el dato de su edad y su año de nacimiento 
+(por ejemplo) tendríamos que hacer un código validando números validos y que tenga un máximo de 4 dígitos,
+evitando así errores en el programa o datos incorrectos. 
+
+2- El strip() sirve para espacios vacíos o algún carácter que estuviera al principio, dejando así un texto final más limpio,
+es decir si nosotros 
+nombre: input(“ingrese un nombre”).strip()
+eso permitiría que el usuario cometiera un error de poner por ejemplo:
+“ carlos” (deja un espacio al principio)
+el strip lo elimina y su dato de salida es 
+“carlos”
+Su diferencia con el Split() es que este ultimo arroja todo lo que sea ingresado, en formato de lista usando una coma como 
+separador entre cada palabra
+texto= “hola mundo”
+Print(texto.split())
+[“hola, mundo”]
+
+3- el count() lo podiramos usar para validar informacion ingresada por el usuario, comprobando por ejemplo que tenga los 2
+o 3 datos solicitados si asi fuera, si se le solicitara al usuario datos sobre, edad, mes que nacio, fecha de nacimiento
+podriamos 
+if datos.count(",") == 2:
+    print("datos correctos")
+else:
+    print("datos incorrectos")
+4- El problema esta en que puede haber errores en la validacion o comparacion entre el mismo nombre, por un espacio, si un dia 
+escribimos "juan" pero otro dia escribimos " juan" se presentaria una inconsistencia en los datos, arrojando asi un error pese 
+a haber escrito bien el nombre.
+

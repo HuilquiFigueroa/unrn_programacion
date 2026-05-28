@@ -1,0 +1,21 @@
+linea = " mara ; programacion ; 8 "
+
+partes = linea.split(";")
+nombre = partes[0].strip().capitalize()
+materia = partes[1].strip().capitalize()
+nota_texto = partes[2].strip()
+
+if nota_texto.isnumeric():
+    nota = int(nota_texto)
+    print(f"{nombre} cursa {materia} y obtuvo {nota}")
+else:
+    print("La nota no es valida")
+
+En este codigo lo que hace es guardar cada dato antes de la coma en "partes"
+luego para cada seccion se ingresa mediante indice por eso nombre = partes [0] 
+que siguiendo la linea seria el nombre de "mara", esto tambien va acompañado de
+los strip que se usan para evitar espacios y despues va el capitalize que posteriormente refleja
+el nombre con mayusculas, dejando un texto mas limpio. En donde mas habria que hacer foco es
+en la nota ya que son numeros, entonces debemos validar ese dato, por eso antes de convertirlo 
+se comprueba con el if nota_texto.isnumeric() de esta forma si el dato es un numero imprime lo esperado
+si no un "la nota no es valida" del Else. 
